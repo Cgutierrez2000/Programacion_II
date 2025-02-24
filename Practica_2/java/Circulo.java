@@ -8,7 +8,7 @@ public class Circulo extends JPanel {
     public Circulo(Punto centro, float radio) {
         this.centro = centro;
         this.radio = radio;
-        setPreferredSize(new Dimension(400, 400)); // Tamaño del panel
+        setPreferredSize(new Dimension(400, 400));
     }
 
     @Override
@@ -24,8 +24,8 @@ public class Circulo extends JPanel {
     public void dibujaCirculo() {
         JFrame frame = new JFrame("Dibujar Círculo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(this); // Agrega el panel Circulo directamente
-        frame.pack(); // Ajusta el tamaño según el panel
+        frame.add(this); 
+        frame.pack(); 
         frame.setVisible(true);
     }
 
@@ -37,7 +37,7 @@ public class Circulo extends JPanel {
     public static void main(String[] args) {
         Punto centro = new Punto(15, 15);
         Circulo circulo = new Circulo(centro, 5);
-        circulo.dibujaCirculo(); // Muestra la ventana con el círculo
+        circulo.dibujaCirculo(); 
         System.out.println(circulo);
     }
 }

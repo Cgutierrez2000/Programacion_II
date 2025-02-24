@@ -7,7 +7,7 @@ public class Linea extends JPanel {
     public Linea(Punto p1, Punto p2) {
         this.p1 = p1;
         this.p2 = p2;
-        setPreferredSize(new Dimension(400, 400)); // Tamaño del panel
+        setPreferredSize(new Dimension(400, 400)); 
     }
 
     @Override
@@ -20,8 +20,8 @@ public class Linea extends JPanel {
     public void dibujaLinea() {
         JFrame frame = new JFrame("Dibujar Línea");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(this); // Agrega el panel Linea directamente
-        frame.pack(); // Ajusta el tamaño según el panel
+        frame.add(this); 
+        frame.pack(); 
         frame.setVisible(true);
     }
 
@@ -34,7 +34,7 @@ public class Linea extends JPanel {
         Punto p1 = new Punto(5, 5);
         Punto p2 = new Punto(3, 3);
         Linea linea = new Linea(p1, p2);
-        linea.dibujaLinea(); // Muestra la ventana con la línea
+        linea.dibujaLinea();
         System.out.println(linea);
     }
 }

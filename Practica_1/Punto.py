@@ -10,7 +10,7 @@ class Punto:
 
     def coord_polares(self):
         radio = math.sqrt(self.x ** 2 + self.y ** 2)
-        angulo = math.atan2(self.y, self.x)  # Usar atan2 para obtener el ángulo correcto
+        angulo = math.atan2(self.y, self.x) 
         angulo = math.degrees(angulo)
         return radio, angulo
 
