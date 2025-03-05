@@ -40,12 +40,12 @@ class Pila:
     def __str__(self):
         return str(self.__arreglo[:self.__top + 1])
 
-A=Pila
+A=Pila(3)
 A.push(17)
 A.push(22)
 A.push(7)
-B=Pila()
-C=Pila() 
+B=Pila(3)
+C=Pila(3) 
 while not A.is_empty():
     e=A.pop()
     if e%2==0:
