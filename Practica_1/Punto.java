@@ -13,7 +13,7 @@ public class Punto {
 
     public float[] coordPolares() {
         float radio = (float) Math.sqrt(x * x + y * y);
-        float angulo = (float) Math.toDegrees(Math.atan2(y, x)); // Usar atan2 para obtener el ángulo correcto
+        float angulo = (float) Math.toDegrees(Math.atan2(y, x)); 
         return new float[]{radio, angulo};
     }
 

@@ -34,7 +34,7 @@ class Circulo:
 
 # Ejemplo de uso
 
-p = Punto(1, 2)
-circulo = Circulo(p, 3)
+p = Punto(0, 0)
+circulo = Circulo(p, 5)
 print(circulo)
 circulo.dibujaCirculo()

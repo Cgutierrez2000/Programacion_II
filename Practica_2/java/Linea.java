@@ -14,7 +14,12 @@ public class Linea extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.BLUE);
-        g.drawLine((int) p1.getX() * 10, (int) p1.getY() * 10, (int) p2.getX() * 10, (int) p2.getY() * 10);
+        // Ajuste de coordenadas para que la línea se dibuje correctamente
+        int x1 = (int) (p1.getX() * 10 + 200);
+        int y1 = (int) (200 - p1.getY() * 10);
+        int x2 = (int) (p2.getX() * 10 + 200);
+        int y2 = (int) (200 - p2.getY() * 10);
+        g.drawLine(x1, y1, x2, y2);
     }
 
     public void dibujaLinea() {
@@ -31,8 +36,8 @@ public class Linea extends JPanel {
     }
 
     public static void main(String[] args) {
-        Punto p1 = new Punto(5, 5);
-        Punto p2 = new Punto(3, 3);
+        Punto p1 = new Punto(0, 0);
+        Punto p2 = new Punto(-5, -5);
         Linea linea = new Linea(p1, p2);
         linea.dibujaLinea();
         System.out.println(linea);

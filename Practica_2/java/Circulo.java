@@ -15,10 +15,11 @@ public class Circulo extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.RED);
-        float x = centro.getX() * 10 - radio * 10;
-        float y = centro.getY() * 10 - radio * 10;
-        float diameter = 2 * radio * 10;
-        g.drawOval((int) x, (int) y, (int) diameter, (int) diameter);
+        // Ajuste de coordenadas para centrar el círculo en el panel
+        int x = (int) (centro.getX() * 10 + 200 - radio * 10);
+        int y = (int) (centro.getY() * 10 + 200 - radio * 10);
+        int diameter = (int) (2 * radio * 10);
+        g.drawOval(x, y, diameter, diameter);
     }
 
     public void dibujaCirculo() {
@@ -35,7 +36,7 @@ public class Circulo extends JPanel {
     }
 
     public static void main(String[] args) {
-        Punto centro = new Punto(15, 15);
+        Punto centro = new Punto(5, 5);
         Circulo circulo = new Circulo(centro, 5);
         circulo.dibujaCirculo(); 
         System.out.println(circulo);
