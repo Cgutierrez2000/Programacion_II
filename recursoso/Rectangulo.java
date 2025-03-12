@@ -13,7 +13,6 @@ public class Rectangulo{
         return String.format("%f %f", this.base, this.altura);
 
     }
-}
 public static void main (String []args){
     Rectangulo r = new Rectangulo(3, 4);
     System.out.println(r);
