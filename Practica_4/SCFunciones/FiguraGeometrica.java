@@ -29,6 +29,7 @@ public class FiguraGeometrica {
 
     public static void main(String[] args) {
         FiguraGeometrica Fg = new FiguraGeometrica();
+        
 
         System.out.println("círculo: " + Fg.area(5));
         System.out.println("rectángulo: " + Fg.area(4, 6));
@@ -37,3 +38,19 @@ public class FiguraGeometrica {
         System.out.println("pentágono: " + Fg.area(3));
     }
 }
+/**
+ *     public static void main(String[] args) {
+        FiguraGeometrica Fg = new FiguraGeometrica();
+        FiguraGeometrica Fg1 = new FiguraGeometrica();
+        FiguraGeometrica Fg2 = new FiguraGeometrica();
+        FiguraGeometrica Fg3 = new FiguraGeometrica();
+        FiguraGeometrica Fg4 = new FiguraGeometrica();
+
+        System.out.println("círculo: " + Fg.area(5));
+        System.out.println("rectángulo: " + Fg1.area(4, 6));
+        System.out.println("triángulo rectángulo: " + Fg2.area(3, 4));
+        System.out.println("trapecio: " + Fg3.area(4, 6, 5));
+        System.out.println("pentágono: " + Fg4.area(3));
+    }
+}
+ */
