@@ -1,5 +1,4 @@
 import math
-
 class FiguraGeometrica:
     # círculo
     def area_circulo(self, radio):
@@ -37,7 +36,6 @@ class FiguraGeometrica:
         else:
             return 0
 
-# Ejemplo de uso
 if __name__ == "__main__":
     Fg = FiguraGeometrica()
 
