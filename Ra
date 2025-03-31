@@ -1,0 +1,43 @@
+public class Veterinaria {
+    private Dueño dueños[];
+    private Mascota mascotas[];
+    private Vacuna vacunas[];
+
+    public Veterinaria(Dueño[] dueños, Mascota[] mascotas, Vacuna[] vacunas) {
+        this.dueños = dueños;
+        this.mascotas = mascotas;
+        this.vacunas = vacunas;
+    }
+
+    public void mostrarDueñosConMaxMascotas() {
+        // Array para contar las mascotas de cada dueño.
+        int[] contador = new int[dueños.length];
+
+        // Para cada dueño se cuenta cuántas mascotas tiene.
+        for (int i = 0; i < dueños.length; i++) {
+            for (int j = 0; j < mascotas.length; j++) {
+                // Se asume que la clase Mascota tiene un método getDueño()
+                // y que la clase Dueño implementa equals() adecuadamente.
+                if (mascotas[j].getDueño().equals(dueños[i])) {
+                    contador[i]++;
+                }
+            }
+        }
+
+        // Se busca la cantidad máxima de mascotas que tiene algún dueño.
+        int maxMascotas = 0;
+        for (int i = 0; i < contador.length; i++) {
+            if (contador[i] > maxMascotas) {
+                maxMascotas = contador[i];
+            }
+        }
+
+        // Se muestran los dueños que tienen la cantidad máxima de mascotas.
+        System.out.println("Dueños con la mayor cantidad de mascotas (" + maxMascotas + "):");
+        for (int i = 0; i < dueños.length; i++) {
+            if (contador[i] == maxMascotas) {
+                dueños[i].mostrar();
+            }
+        }
+    }
+}
