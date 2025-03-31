@@ -1,7 +1,7 @@
 package Lab01.Ejer1;
 import java.util.Scanner;
 
-class EcuacionCuadratica {
+public class EcuacionCuadratica {
     private double a, b, c;
 
     public EcuacionCuadratica(double a, double b, double c) {
@@ -31,6 +31,7 @@ class EcuacionCuadratica {
     }
 
     public void solucion() {
+        
         double discriminante = getDiscriminante();
         if (discriminante > 0) {
             System.out.println("La ecuación tiene dos raíces " + getRaiz1() + " y " + getRaiz2());
