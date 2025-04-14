@@ -1,0 +1,35 @@
+class A:
+    def __init__(self, x):
+        self.x = x
+
+    def metodo1(self):
+        self.x =self.x+ 1
+        
+
+
+class B:
+    def __init__(self, y):
+        self.y = y
+
+    def metodo2(self):
+        self.y =self.y+1
+        
+
+
+class C  (A,B):
+    
+    def __init__(self, x, y):
+        A.__init__(self.x)
+        B.__init__(self.y)
+
+    def metodo(self):
+        self.x=self.x+1
+        self.y=self.y+1
+        
+    def __str__(self):
+        return ("f")
+
+
+# Ejemplo de uso
+c = C(5, 10)
+c.metodo()
