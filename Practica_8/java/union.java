@@ -7,9 +7,9 @@ public interface B {
     void incrementarZ();
 }
 public class D implements A, B {
-    private int x;
-    private int y;
-    private int z;
+    public int x;
+    public int y;
+    public int z;
 
     public D(int x, int y, int z) {
         this.x = x;
@@ -17,19 +17,28 @@ public class D implements A, B {
         this.z = z;
     }
     public void incrementarXYZ() {
-        x++;
-        y++;
-        z++;
-    }
-    public void incrementarXZ() {
-        x++;
-        z++;
-    }
-    public void incrementarYZ() {
-        y++;
-        z++;
-    }
-    public void incrementarZ() {
-        z++;
-    }
+    	x++;
+    	y++;
+    	z++;
+    } 
+    @Override
+	public void incrementarYZ() {
+		y++;
+		z++;		
+	}
+	@Override
+	public void incrementarXZ() {
+		x++;
+		z++;
+	}
+	@Override
+	public void incrementarZ() {
+		z++;
+	}
+	
+	@Override
+	public String toString() {
+	    return "D{x=" + x + ", y=" + y + ", z=" + z + "}";
+	}
+	
 }

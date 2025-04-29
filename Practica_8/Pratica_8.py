@@ -31,29 +31,23 @@ class D(A, B):
     def mostrar(self):
         print(f"x = {self.x}, y = {self.y}, z = {self.z}")
 if __name__ == "__main__":
-    # Crear una instancia de la clase D
     d = D(1, 2, 3)
 
-    # Mostrar valores iniciales
     print("Valores iniciales:")
     d.mostrar()
 
-    # Incrementar x, y, z usando incrementarXYZ
     d.incrementarXYZ()
     print("\nDespués de incrementarXYZ:")
     d.mostrar()
 
-    # Incrementar x y z usando incrementarXZ
     d.incrementarXZ()
     print("\nDespués de incrementarXZ:")
     d.mostrar()
 
-    # Incrementar y y z usando incrementarYZ
     d.incrementarYZ()
     print("\nDespués de incrementarYZ:")
     d.mostrar()
 
-    # Incrementar solo z usando incrementarZ
     d.incrementarZ()
     print("\nDespués de incrementarZ:")
     d.mostrar()
